@@ -1,1 +1,97 @@
-nigger balls
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>nekobot.xyz on top</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      
+      #video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      
+      #discord-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+        padding: 10px;
+        background-color: #7289DA;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      #discord-button:hover {
+        background-color: #677BC4;
+      }
+      
+      #discord-logo {
+        height: 20px;
+        margin-left: 5px;
+        vertical-align: middle;
+      }
+      
+      #text-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 10px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <video id="video-background" autoplay muted loop>
+      <source src="https://s3.us-east-1.wasabisys.com/bios/ea7b5311-abe3-4e20-aaae-a3848edb5937/9yz90zhoyg.mp4" type="video/mp4">
+    </video>
+    
+    <img id="dynamic-image" alt="Dynamic image">
+    
+    <a id="discord-button" href="https://discord.gg/NRZvrm346c">
+      Join Discord
+      <img id="discord-logo" src="https://cdn.discordapp.com/attachments/1082808207514271794/1094450156373561374/concours-discord-cartes-voeux-fortnite-france-6.png" alt="Discord logo">
+    </a>
+    
+    <div id="text-box">
+    </div>
+    
+    <script>
+      fetch('https://nekobot.xyz/api/image?type=ass')
+        .then(response => response.json())
+        .then(data => {
+          const imageUrl = data.message;
+          const imageElement = document.getElementById('dynamic-image');
+          imageElement.src = imageUrl;
+        })
+        .catch(error => console.error(error));
+    </script>
+  </body>
+</html>
