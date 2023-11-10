@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>nekobot.xyz</title> <!-- Updated webpage title -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="rainbow-text">nekobot.xyz</h1>
+        <a class="source-link" href="https://nekobot.xyz" target="_blank">Source</a>
+    </div>
+    <div class="container">
+        <div class="dropdown-container">
+            <select id="variableDropdown" onchange="showVariableValue()">
+                <option value="">Select a variable</option>
+            </select>
+            <button onclick="refreshImage()" class="refresh-button">Refresh Image<span class="loader" id="loader"></span></button>
+        </div>
+        <img id="dynamic-image"/>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
